@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    margin-top: 10px;
+}
+.content-Grid{
+    display: grid;
+   /* grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;*/
+    grid:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr; /* este combina grid-template-rows Y grid-template-columns*/
+    width: 500px;
+    height: 500px;
+    border: 3px solid black;
+    margin: 0 auto;
+   /* column-gap: 3px;
+    row-gap: 3px;*/
+    /*1em = 16px*/
+    background: black;
+    gap: 3px 3px; /*colocando primero el ROW (filas) Y despues el COLUM (columnas)*/
+}
+.contenido:nth-child(1){
+    background: #76FF03;
+    grid-row: 1/3;
+    grid-column:1/2 ;
+}
+.contenido:nth-child(2){
+    background: #40C4FF;
+    grid-row: 1/3;
+    grid-column: 2/5;
+}
+.contenido:nth-child(3){
+    background: #F50057;
+    grid-row: 1/2;
+    grid-column: 5/6;
+}
+.contenido:nth-child(4){
+    background: #FFFF00;
+    grid-row: 2/3;
+    grid-column: 5/6;
+}
+.contenido:nth-child(5){
+    background: #D500F9;
+    grid-row: 3/4;
+    grid-column: 1/6;
+}
+.contenido:nth-child(6){
+    background: #9FA8DA;
+    grid-row: 4/6;
+    grid-column: 1/3;
+}
+.contenido:nth-child(7){
+    background: #EEFF41;
+    grid-row: 4/6;
+    grid-column: 3/5;
+}
+.contenido:nth-child(8){
+    background: #795548;
+    grid-row: 4/8;
+    grid-column: 5/6;
+}
+.contenido:nth-child(9){
+    background: #FFB300;
+    grid-row: 6/8;
+    grid-column: 1/3;
+}
+.contenido:nth-child(10){
+    background: #1DE9B6;
+    grid-row: 6/8;
+    grid-column: 3/5;
+}
+.contenido:nth-child(11){
+    background: #1A237E;
+    grid-row: 8/9;
+    grid-column: 1/6;
+}
