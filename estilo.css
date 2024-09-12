@@ -10,11 +10,13 @@ h1{
 .content-flex{
     display: flex; /*define que el contenedor sea frexible*/
     /*width: 400px;*/
-    height: 300px;
+    height: 400px;
     border: 3px solid lawngreen;
     margin: 0 auto;
     background: black;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
    /* flex-wrap: wrap-reverse;*//* auto ajuste */
 }
 .contenido{
@@ -24,118 +26,132 @@ h1{
 }
 .contenido:nth-child(1){
     background: violet;
-    order: 3;
+    
+    
 }
 .contenido:nth-child(2){
     background: powderblue;
-    order: 5;
+    align-self: flex-start;
+    
 }
 .contenido:nth-child(3){
     background: darkkhaki;
-    order: 4;
+    
 }
 .contenido:nth-child(4){
     background: cornflowerblue;
-    order: 1;
+   
 }
 .contenido:nth-child(5){
     background: khaki;
-    order: 6;
+    align-self: flex-end;
+    
 }
 .contenido:nth-child(6){
     background: yellow;
-    order: 2;
+    
+}
+.contenido:nth-child(7){
+    background: mediumorchid;
+
+}
+.contenido:nth-child(8){
+    background: tomato;
+    
 }
 /* lo anteriore es para una resolucion <=500px (MOVILE FIRST*/
 /* Utilizando media query para validar al resolucion 700px */
-@media screen and (min-width:700px) {
+@media screen and (min-width:568px){
     .content-flex{
-        flex-direction: row;
-       /* flex-wrap: wrap-reverse;*//* auto ajuste */
+        flex-direction: column;
     }
     .contenido:nth-child(1){
-        order: 1;
-        flex-grow: 2;
+        align-self: flex-start;
     }
     .contenido:nth-child(2){
-        order: 2;
-        flex-grow: 0;
+        align-self: flex-end;
     }
     .contenido:nth-child(3){
-        order: 3;
-        flex-grow: 0;
+        align-self: flex-start;
     }
     .contenido:nth-child(4){
-        order: 4;
-        flex-grow: 0;
+        align-self: flex-end;
     }
     .contenido:nth-child(5){
-        order: 5;
-        flex-grow: 0;
+        align-self: flex-start;
     }
     .contenido:nth-child(6){
-        order: 6;
-        flex-grow: 4;
+        align-self: flex-end;
     }
+
+    .contenido:nth-child(7){
+        align-self: flex-start;
+    }
+    
+    .contenido:nth-child(8){
+        align-self: flex-end;
+    }
+
 }
 /* Utilizando media query para validar al resolucion 800px */
-@media screen and (min-width:900px) {
+@media screen and (min-width:768px){
     .content-flex{
-        flex-direction: row;
-       /* flex-wrap: wrap-reverse;*//* auto ajuste */
+        flex-direction: column;
     }
+
     .contenido:nth-child(1){
-        order: 3;
-        flex-grow: 2;
+        align-self: center;
     }
     .contenido:nth-child(2){
-        order: 6;
-        flex-grow: 1;
+        align-self: flex-start;
     }
     .contenido:nth-child(3){
-        order: 1;
-        flex-grow: 0;
+        align-self: flex-end;
     }
     .contenido:nth-child(4){
-        order: 4;
-        flex-grow: 0;
+        align-self: flex-start;
     }
     .contenido:nth-child(5){
-        order: 2;
-        flex-grow: 0;
+        align-self: flex-end;
     }
     .contenido:nth-child(6){
-        order: 5;
-        flex-grow: 0;
+        align-self: flex-start;
     }
+    .contenido:nth-child(7){
+        align-self: flex-end;
+    }
+    .contenido:nth-child(8){
+        align-self: center;
+    }
+
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width:968px) {
     .content-flex{
         flex-direction: row;
        /* flex-wrap: wrap-reverse;*//* auto ajuste */
     }
     .contenido:nth-child(1){
-        order: 6;
-        flex-grow: 0;
+        align-self: center;
     }
     .contenido:nth-child(2){
-        order: 1;
-        flex-grow: 1;
+        align-self: flex-start;
     }
     .contenido:nth-child(3){
-        order: 5;
-        flex-grow: 2;
+        align-self: flex-end;
     }
     .contenido:nth-child(4){
-        order: 2;
-        flex-grow: 1;
+        align-self: center;
     }
     .contenido:nth-child(5){
-        order: 3;
-        flex-grow: 0;
+        align-self: flex-start;
     }
     .contenido:nth-child(6){
-        order: 4;
-        flex-grow: 0;
+        align-self: center;
+    }
+    .contenido:nth-child(7){
+        align-self: flex-end;
+    }
+    .contenido:nth-child(8){
+        align-self: flex-start;
     }
 }
